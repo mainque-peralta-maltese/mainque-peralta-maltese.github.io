@@ -6,7 +6,6 @@
   <title>Mainque Peralta Maltese — Rugby Player</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
       font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
       background: #e8e8e8;
@@ -19,168 +18,66 @@
 
     /* ── Language switcher ── */
     .lang-bar {
-      width: 100%;
-      max-width: 900px;
-      display: flex;
-      justify-content: flex-end;
-      gap: 8px;
-      margin-bottom: 12px;
+      width: 100%; max-width: 900px;
+      display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 12px;
     }
     .lang-btn {
-      background: none;
-      border: 2px solid #1c1c1c;
-      color: #1c1c1c;
-      font-family: inherit;
-      font-size: 13px;
-      font-weight: 700;
-      padding: 4px 14px;
-      border-radius: 3px;
-      cursor: pointer;
-      letter-spacing: .5px;
-      transition: background .18s, color .18s;
+      background: none; border: 2px solid #1c1c1c; color: #1c1c1c;
+      font-family: inherit; font-size: 13px; font-weight: 700;
+      padding: 4px 14px; border-radius: 3px; cursor: pointer;
+      letter-spacing: .5px; transition: background .18s, color .18s;
     }
-    .lang-btn.active, .lang-btn:hover {
-      background: #1c1c1c;
-      color: #fff;
-    }
+    .lang-btn.active, .lang-btn:hover { background: #1c1c1c; color: #fff; }
 
     /* ── CV card ── */
-    .cv {
-      width: 100%;
-      max-width: 900px;
-      background: #fff;
-      box-shadow: 0 4px 24px rgba(0,0,0,.18);
-    }
+    .cv { width: 100%; max-width: 900px; background: #fff; box-shadow: 0 4px 24px rgba(0,0,0,.18); }
 
     /* ── Header ── */
     .cv-header {
-      background: #1c1c1c;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      padding: 28px 36px;
+      background: #1c1c1c; display: flex; align-items: center;
+      gap: 24px; padding: 28px 36px;
     }
     .cv-header img {
-      width: 108px;
-      height: 108px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #fff;
-      flex-shrink: 0;
+      width: 108px; height: 108px; border-radius: 50%;
+      object-fit: cover; border: 3px solid #fff; flex-shrink: 0;
     }
-    .cv-header-text h1 {
-      color: #fff;
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: .5px;
-      line-height: 1.15;
-    }
-    .cv-header-text .subtitle {
-      color: #bbb;
-      font-size: .95rem;
-      margin-top: 8px;
-      letter-spacing: .3px;
-    }
-    .cv-header-text .subtitle span {
-      margin: 0 6px;
-      color: #c0392b;
-    }
+    .cv-header-text h1 { color: #fff; font-size: 2rem; font-weight: 700; letter-spacing: .5px; line-height: 1.15; }
+    .cv-header-text .subtitle { color: #bbb; font-size: .95rem; margin-top: 8px; letter-spacing: .3px; }
+    .cv-header-text .subtitle .dot { margin: 0 6px; color: #c0392b; }
 
-    /* ── Body: two columns ── */
-    .cv-body {
-      display: grid;
-      grid-template-columns: 38% 62%;
-    }
-
-    .col-left {
-      background: #f4f4f4;
-      border-right: 1px solid #ddd;
-      padding: 28px 26px;
-    }
-    .col-right {
-      padding: 28px 30px;
-    }
+    /* ── Body ── */
+    .cv-body { display: grid; grid-template-columns: 38% 62%; }
+    .col-left { background: #f4f4f4; border-right: 1px solid #ddd; padding: 28px 26px; }
+    .col-right { padding: 28px 30px; }
 
     /* ── Section title ── */
     .sec-title {
-      font-size: .8rem;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-      color: #1c1c1c;
-      text-transform: uppercase;
-      border-bottom: 3px solid #c0392b;
-      padding-bottom: 4px;
-      margin-bottom: 12px;
-      margin-top: 22px;
+      font-size: .8rem; font-weight: 700; letter-spacing: 1.2px; color: #1c1c1c;
+      text-transform: uppercase; border-bottom: 3px solid #c0392b;
+      padding-bottom: 4px; margin-bottom: 12px; margin-top: 22px;
     }
-    .col-left .sec-title:first-child,
-    .col-right .sec-title:first-child {
-      margin-top: 0;
-    }
+    .col-left .sec-title:first-child, .col-right .sec-title:first-child { margin-top: 0; }
 
     /* ── Label / value ── */
-    .lv {
-      font-size: .88rem;
-      margin-bottom: 7px;
-      line-height: 1.4;
-    }
-    .lv strong {
-      color: #1c1c1c;
-    }
-    .lv span {
-      color: #4a4a4a;
-    }
+    .lv { font-size: .88rem; margin-bottom: 7px; line-height: 1.4; }
+    .lv strong { color: #1c1c1c; }
+    .lv span { color: #4a4a4a; }
 
     /* ── Bullets ── */
-    ul.cv-list {
-      list-style: none;
-      padding: 0;
-    }
+    ul.cv-list { list-style: none; padding: 0; }
     ul.cv-list li {
-      font-size: .9rem;
-      color: #1c1c1c;
-      padding: 5px 0 5px 16px;
-      position: relative;
-      line-height: 1.45;
+      font-size: .9rem; color: #1c1c1c; padding: 5px 0 5px 16px;
+      position: relative; line-height: 1.45;
     }
-    ul.cv-list li::before {
-      content: '–';
-      position: absolute;
-      left: 0;
-      color: #c0392b;
-      font-weight: 700;
-    }
+    ul.cv-list li::before { content: '–'; position: absolute; left: 0; color: #c0392b; font-weight: 700; }
 
-    /* ── Plain text (perfil) ── */
-    .cv-para {
-      font-size: .9rem;
-      color: #4a4a4a;
-      line-height: 1.6;
-      margin-top: 8px;
-    }
-
-    /* ── Bold line ── */
-    .bold-line {
-      font-size: .88rem;
-      font-weight: 700;
-      color: #1c1c1c;
-      margin-top: 8px;
-    }
-    .plain-line {
-      font-size: .86rem;
-      color: #4a4a4a;
-      margin-top: 2px;
-    }
+    /* ── Plain text ── */
+    .cv-para { font-size: .9rem; color: #4a4a4a; line-height: 1.6; margin-top: 8px; }
+    .bold-line { font-size: .88rem; font-weight: 700; color: #1c1c1c; margin-top: 8px; }
+    .plain-line { font-size: .86rem; color: #4a4a4a; margin-top: 2px; }
 
     /* ── Footer ── */
-    .cv-footer {
-      background: #1c1c1c;
-      text-align: center;
-      padding: 10px;
-      font-size: .78rem;
-      color: #888;
-      letter-spacing: .5px;
-    }
+    .cv-footer { background: #1c1c1c; text-align: center; padding: 10px; font-size: .78rem; color: #888; letter-spacing: .5px; }
 
     @media (max-width: 620px) {
       .cv-body { grid-template-columns: 1fr; }
@@ -194,6 +91,7 @@
 
 <div class="lang-bar">
   <button class="lang-btn active" onclick="setLang('es')">ES</button>
+  <button class="lang-btn" onclick="setLang('en')">EN</button>
   <button class="lang-btn" onclick="setLang('fr')">FR</button>
 </div>
 
@@ -205,11 +103,11 @@
     <div class="cv-header-text">
       <h1>MAINQUE PERALTA MALTESE</h1>
       <div class="subtitle">
-        <span data-es="Jugador de Rugby" data-fr="Joueur de Rugby">Jugador de Rugby</span>
-        <span>·</span>
-        <span data-es="Medio Scrum (9)" data-fr="Demi de mêlée (9)">Medio Scrum (9)</span>
-        <span>·</span>
-        <span data-es="Profesor de Educación Física" data-fr="Professeur d'Éducation Physique">Profesor de Educación Física</span>
+        <span data-t='{"es":"Jugador de Rugby","en":"Rugby Player","fr":"Joueur de Rugby"}'></span>
+        <span class="dot">·</span>
+        <span data-t='{"es":"Medio Scrum (9)","en":"Scrum Half (9)","fr":"Demi de mêlée (9)"}'></span>
+        <span class="dot">·</span>
+        <span data-t='{"es":"Profesor de Educación Física","en":"Physical Education Teacher","fr":"Professeur d'Éducation Physique"}'></span>
       </div>
     </div>
   </div>
@@ -220,68 +118,66 @@
     <!-- LEFT -->
     <div class="col-left">
 
-      <div class="sec-title" data-es="Datos Personales" data-fr="Données Personnelles">Datos Personales</div>
-      <div class="lv"><strong data-es="Ciudadanía:" data-fr="Nationalité:">Ciudadanía:</strong> <span data-es="Argentina" data-fr="Argentine">Argentina</span></div>
-      <div class="lv"><strong data-es="C. italiana:" data-fr="C. italienne:">C. italiana:</strong> <span data-es="En trámite" data-fr="En cours">En trámite</span></div>
-      <div class="lv"><strong data-es="Nacimiento:" data-fr="Naissance:">Nacimiento:</strong> <span>03/06/1996</span></div>
-      <div class="lv"><strong data-es="Altura / Peso:" data-fr="Taille / Poids:">Altura / Peso:</strong> <span>170 cm · 77 kg</span></div>
-      <div class="lv"><strong data-es="Posición:" data-fr="Poste:">Posición:</strong> <span data-es="Medio scrum (9)" data-fr="Demi de mêlée (9)">Medio scrum (9)</span></div>
+      <div class="sec-title" data-t='{"es":"Datos Personales","en":"Personal Information","fr":"Données Personnelles"}'></div>
+      <div class="lv"><strong data-t='{"es":"Ciudadanía:","en":"Nationality:","fr":"Nationalité:"}'></strong> <span data-t='{"es":"Argentina","en":"Argentine","fr":"Argentine"}'></span></div>
+      <div class="lv"><strong data-t='{"es":"C. italiana:","en":"Italian passport:","fr":"C. italienne:"}'></strong> <span data-t='{"es":"En trámite","en":"In progress","fr":"En cours"}'></span></div>
+      <div class="lv"><strong data-t='{"es":"Nacimiento:","en":"Date of birth:","fr":"Naissance:"}'></strong> <span>03/06/1996</span></div>
+      <div class="lv"><strong data-t='{"es":"Altura / Peso:","en":"Height / Weight:","fr":"Taille / Poids:"}'></strong> <span>170 cm · 77 kg</span></div>
+      <div class="lv"><strong data-t='{"es":"Posición:","en":"Position:","fr":"Poste:"}'></strong> <span data-t='{"es":"Medio scrum (9)","en":"Scrum Half (9)","fr":"Demi de mêlée (9)"}'></span></div>
 
-      <div class="sec-title" data-es="Contacto" data-fr="Contact">Contacto</div>
+      <div class="sec-title" data-t='{"es":"Contacto","en":"Contact","fr":"Contact"}'></div>
       <div class="lv"><strong>Email:</strong> <span>mainque.peraltam@gmail.com</span></div>
       <div class="lv"><strong>Tel.:</strong> <span>+54 9 353-4810298</span></div>
       <div class="lv"><strong>Instagram:</strong> <span>@mainquepe.ma</span></div>
 
-      <div class="sec-title" data-es="Habilidades" data-fr="Compétences">Habilidades</div>
+      <div class="sec-title" data-t='{"es":"Habilidades","en":"Skills","fr":"Compétences"}'></div>
       <ul class="cv-list">
-        <li data-es="Liderazgo de plantel" data-fr="Leadership d'équipe">Liderazgo de plantel</li>
-        <li data-es="Gestión de equipos juveniles" data-fr="Gestion d'équipes jeunes">Gestión de equipos juveniles</li>
-        <li data-es="Preparación física y planificación" data-fr="Préparation physique et planification">Preparación física y planificación</li>
-        <li data-es="Adaptación a metodologías internacionales" data-fr="Adaptation aux méthodologies internationales">Adaptación a metodologías internacionales</li>
+        <li data-t='{"es":"Liderazgo de plantel","en":"Team leadership","fr":"Leadership d'équipe"}'></li>
+        <li data-t='{"es":"Gestión de equipos juveniles","en":"Youth team management","fr":"Gestion d'équipes jeunes"}'></li>
+        <li data-t='{"es":"Preparación física y planificación","en":"Physical preparation & planning","fr":"Préparation physique et planification"}'></li>
+        <li data-t='{"es":"Adaptación a metodologías internacionales","en":"Adaptability to international methodologies","fr":"Adaptation aux méthodologies internationales"}'></li>
       </ul>
 
-      <div class="sec-title" data-es="Formación" data-fr="Formation">Formación</div>
-      <div class="bold-line" data-es="Profesor de Educación Física" data-fr="Professeur d'Éducation Physique">Profesor de Educación Física</div>
+      <div class="sec-title" data-t='{"es":"Formación","en":"Education","fr":"Formation"}'></div>
+      <div class="bold-line" data-t='{"es":"Profesor de Educación Física","en":"Physical Education Teacher","fr":"Professeur d'Éducation Physique"}'></div>
 
-      <div class="sec-title" data-es="Referencia" data-fr="Référence">Referencia</div>
+      <div class="sec-title" data-t='{"es":"Referencia","en":"Reference","fr":"Référence"}'></div>
       <div class="bold-line">Pablo Pereyra</div>
-      <div class="plain-line" data-es="Ex jugador — División de Honor (España)" data-fr="Ex-joueur — Division d'Honneur (Espagne)">Ex jugador — División de Honor (España)</div>
+      <div class="plain-line" data-t='{"es":"Ex jugador — División de Honor (España)","en":"Former player — División de Honor (Spain)","fr":"Ex-joueur — Division d'Honneur (Espagne)"}'></div>
 
     </div>
 
     <!-- RIGHT -->
     <div class="col-right">
 
-      <div class="sec-title" data-es="Trayectoria Deportiva" data-fr="Parcours Sportif">Trayectoria Deportiva</div>
+      <div class="sec-title" data-t='{"es":"Trayectoria Deportiva","en":"Sporting Career","fr":"Parcours Sportif"}'></div>
       <ul class="cv-list">
-        <li data-es="San Martín Rugby Club (2008 – presente)" data-fr="San Martín Rugby Club (2008 – présent)">San Martín Rugby Club (2008 – presente)</li>
-        <li data-es="Pre-selección Córdoba M-18 (2014)" data-fr="Pré-sélection Córdoba M-18 (2014)">Pre-selección Córdoba M-18 (2014)</li>
-        <li data-es="Debut en el primer equipo (2016)" data-fr="Débuts en première équipe (2016)">Debut en el primer equipo (2016)</li>
-        <li data-es="Subcapitán del primer equipo (2019)" data-fr="Vice-capitaine de la première équipe (2019)">Subcapitán del primer equipo (2019)</li>
-        <li data-es="Capitán del primer equipo (2021)" data-fr="Capitaine de la première équipe (2021)">Capitán del primer equipo (2021)</li>
-        <li data-es="Capitán (2026)" data-fr="Capitaine (2026)">Capitán (2026)</li>
+        <li data-t='{"es":"San Martín Rugby Club (2008 – presente)","en":"San Martín Rugby Club (2008 – present)","fr":"San Martín Rugby Club (2008 – présent)"}'></li>
+        <li data-t='{"es":"Pre-selección Córdoba M-18 (2014)","en":"Córdoba M-18 Pre-selection (2014)","fr":"Pré-sélection Córdoba M-18 (2014)"}'></li>
+        <li data-t='{"es":"Debut en el primer equipo (2016)","en":"First team debut (2016)","fr":"Débuts en première équipe (2016)"}'></li>
+        <li data-t='{"es":"Subcapitán del primer equipo (2019)","en":"Vice-captain of the first team (2019)","fr":"Vice-capitaine de la première équipe (2019)"}'></li>
+        <li data-t='{"es":"Capitán del primer equipo (2021)","en":"Captain of the first team (2021)","fr":"Capitaine de la première équipe (2021)"}'></li>
+        <li data-t='{"es":"Capitán (2026)","en":"Captain (2026)","fr":"Capitaine (2026)"}'></li>
       </ul>
 
-      <div class="sec-title" data-es="Palmarés" data-fr="Palmarès">Palmarés</div>
+      <div class="sec-title" data-t='{"es":"Palmarés","en":"Honours","fr":"Palmarès"}'></div>
       <ul class="cv-list">
-        <li data-es="Semifinalista Top 10 de Córdoba (2023)" data-fr="Demi-finaliste Top 10 de Córdoba (2023)">Semifinalista Top 10 de Córdoba (2023)</li>
-        <li data-es="3.° y 4.° puesto Top 10 de Córdoba (2023)" data-fr="3e et 4e place Top 10 de Córdoba (2023)">3.° y 4.° puesto Top 10 de Córdoba (2023)</li>
-        <li data-es="Clasificación Torneo Nacional TDI-A (2023)" data-fr="Qualification Tournoi National TDI-A (2023)">Clasificación Torneo Nacional TDI-A (2023)</li>
-        <li data-es="Clasificación Torneo Nacional TDI-B (2024)" data-fr="Qualification Tournoi National TDI-B (2024)">Clasificación Torneo Nacional TDI-B (2024)</li>
-        <li data-es="Campeón Seven — Unión Cordobesa de Rugby (2025)" data-fr="Champion Seven — Union Cordobaise de Rugby (2025)">Campeón Seven — Unión Cordobesa de Rugby (2025)</li>
+        <li data-t='{"es":"Semifinalista Top 10 de Córdoba (2023)","en":"Semi-finalist Top 10 de Córdoba (2023)","fr":"Demi-finaliste Top 10 de Córdoba (2023)"}'></li>
+        <li data-t='{"es":"3.° y 4.° puesto Top 10 de Córdoba (2023)","en":"3rd & 4th place Top 10 de Córdoba (2023)","fr":"3e et 4e place Top 10 de Córdoba (2023)"}'></li>
+        <li data-t='{"es":"Clasificación Torneo Nacional TDI-A (2023)","en":"Qualification — National Tournament TDI-A (2023)","fr":"Qualification Tournoi National TDI-A (2023)"}'></li>
+        <li data-t='{"es":"Clasificación Torneo Nacional TDI-B (2024)","en":"Qualification — National Tournament TDI-B (2024)","fr":"Qualification Tournoi National TDI-B (2024)"}'></li>
+        <li data-t='{"es":"Campeón Seven — Unión Cordobesa de Rugby (2025)","en":"Seven Champions — Unión Cordobesa de Rugby (2025)","fr":"Champion Seven — Union Cordobaise de Rugby (2025)"}'></li>
       </ul>
 
-      <div class="sec-title" data-es="Experiencia Profesional" data-fr="Expérience Professionnelle">Experiencia Profesional</div>
+      <div class="sec-title" data-t='{"es":"Experiencia Profesional","en":"Professional Experience","fr":"Expérience Professionnelle"}'></div>
       <ul class="cv-list">
-        <li data-es="Entrenamiento personalizado para adultos mayores" data-fr="Entraînement personnalisé pour seniors">Entrenamiento personalizado para adultos mayores</li>
-        <li data-es="Entrenador de rugby infantil" data-fr="Entraîneur de rugby pour enfants">Entrenador de rugby infantil</li>
-        <li data-es="Docente en colonias de verano" data-fr="Enseignant en colonies de vacances">Docente en colonias de verano</li>
+        <li data-t='{"es":"Entrenamiento personalizado para adultos mayores","en":"Personalised training for senior citizens","fr":"Entraînement personnalisé pour seniors"}'></li>
+        <li data-t='{"es":"Entrenador de rugby infantil","en":"Rugby coach for children","fr":"Entraîneur de rugby pour enfants"}'></li>
+        <li data-t='{"es":"Docente en colonias de verano","en":"Teacher in summer camps","fr":"Enseignant en colonies de vacances"}'></li>
       </ul>
 
-      <div class="sec-title" data-es="Perfil" data-fr="Profil">Perfil</div>
-      <p class="cv-para" data-es="Jugador comprometido con vocación de liderazgo, en búsqueda de un club profesional o semiprofesional donde aportar experiencia comprobada en la posición de medio scrum (9). Disponible para traslado. Doble ciudadanía argentina-italiana en proceso." data-fr="Joueur engagé avec une vocation de leadership, à la recherche d'un club professionnel ou semi-professionnel où apporter une expérience éprouvée au poste de demi de mêlée (9). Disponible pour un déménagement. Double nationalité argentine-italienne en cours.">
-        Jugador comprometido con vocación de liderazgo, en búsqueda de un club profesional o semiprofesional donde aportar experiencia comprobada en la posición de medio scrum (9). Disponible para traslado. Doble ciudadanía argentina-italiana en proceso.
-      </p>
+      <div class="sec-title" data-t='{"es":"Perfil","en":"Profile","fr":"Profil"}'></div>
+      <p class="cv-para" data-t='{"es":"Jugador comprometido con vocación de liderazgo, en búsqueda de un club profesional o semiprofesional donde aportar experiencia comprobada en la posición de medio scrum (9). Disponible para traslado. Doble ciudadanía argentina-italiana en proceso.","en":"Committed player with a vocation for leadership, seeking a professional or semi-professional club where he can contribute proven experience as a scrum half (9). Available to relocate. Argentine-Italian dual citizenship in progress.","fr":"Joueur engagé avec une vocation de leadership, à la recherche d'un club professionnel ou semi-professionnel où apporter une expérience éprouvée au poste de demi de mêlée (9). Disponible pour un déménagement. Double nationalité argentine-italienne en cours."}'></p>
 
     </div>
   </div>
@@ -290,28 +186,25 @@
 </div>
 
 <script>
+  const LANG_DEFAULT = 'es';
+
   function setLang(lang) {
-    // Update buttons
     document.querySelectorAll('.lang-btn').forEach(b => {
-      b.classList.toggle('active', b.textContent === lang.toUpperCase());
+      b.classList.toggle('active', b.textContent.trim() === lang.toUpperCase());
     });
 
-    // Update all translatable elements
-    document.querySelectorAll('[data-' + lang + ']').forEach(el => {
-      const val = el.getAttribute('data-' + lang);
-      // Section titles and plain elements: set textContent
-      if (!el.classList.contains('subtitle')) {
-        el.textContent = val;
-      }
-    });
-
-    // Subtitle spans need individual handling
-    document.querySelectorAll('.subtitle [data-' + lang + ']').forEach(el => {
-      el.textContent = el.getAttribute('data-' + lang);
+    document.querySelectorAll('[data-t]').forEach(el => {
+      try {
+        const map = JSON.parse(el.getAttribute('data-t'));
+        if (map[lang] !== undefined) el.textContent = map[lang];
+      } catch(e) {}
     });
 
     document.documentElement.lang = lang;
   }
+
+  // Init on load
+  setLang(LANG_DEFAULT);
 </script>
 
 </body>
